@@ -25,3 +25,13 @@ ________________________________________________________________________________
 | Self Grade: | 30/100 |
 | Notes: | Sorry, in advance. This program is incomplete and not good. I was able to get two functions complete. However, I got stuck and ran into issues with the function (readBoard), as it would only print out the first line of the board and then set the rest of the board to 0, which is incorrect.  |
 
+## Lab #2
+| Name | Value |
+| --- | --- |
+| Name: | Point Distance |
+| Description: | Program generates random number of points. Then calculates point distance and chooses closest point to a random X and Y point chosen by user. |
+| Due Date: | 09/16/2024 |
+| Status: | Complete |
+| Location: | |
+| Self Grade: | 100/100 |
+| Notes: | Everything works like it's supposed to. Yay!  |
