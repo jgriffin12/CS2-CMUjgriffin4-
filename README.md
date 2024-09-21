@@ -32,6 +32,6 @@ ________________________________________________________________________________
 | Description: | Program generates random number of points. Then calculates point distance and chooses closest point to a random X and Y point chosen by user. |
 | Due Date: | 09/16/2024 |
 | Status: | Complete |
-| Location: | |
+| Location: |https://github.com/jgriffin12/CS2-CMUjgriffin4-/blob/main/Labs/Lab%202/point.cpp |
 | Self Grade: | 100/100 |
 | Notes: | Everything works like it's supposed to. Yay!  |
