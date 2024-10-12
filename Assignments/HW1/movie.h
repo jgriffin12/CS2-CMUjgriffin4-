@@ -38,6 +38,5 @@ namespace movies
             void setGenre(string);
             void setRating(double);
             void setDirector(string);
-    }
-
-;}
+    };
+}

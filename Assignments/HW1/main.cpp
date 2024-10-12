@@ -2,40 +2,16 @@
 Name: Janet Griffin
 Date: 09/18/2024
 Program: Movie Database
-Description:
-
+Description: Movie database is able to add, delete, update, or print depending on what the user wants. 
 */
 
 #include <iostream>
 #include <iomanip>
-#include <movie.h>
-#include <database.h>
+#include "movie.h"
+#include "database.h"
+#include <fstream>
 
 using namespace std; 
-
-// Function to add movie to the database
-void addMovie()
-{
-    cout << "Add movie" << endl; 
-}
-
-// Function to delete movie from the database 
-void deleteMovie()
-{
-    cout << "Delete movie" << endl; 
-}
-
-// Function to print all the movies from the database 
-void printMovie()
-{
-    cout << "Print movie" << endl; 
-}
-
-// Function to write the movies from the database to a separate csv file
-void writeMovieDB()
-{
-    cout << "write to movie" << endl; 
-}
 
 // Function for the user to choose a menu option 
 int readMenu()
@@ -63,7 +39,7 @@ int readMenu()
     } else if (option == 4)
     {
         return 4; 
-        
+
     } else
     {
         cout << "Option not valid. Please try again." << endl;
@@ -74,24 +50,32 @@ int readMenu()
 int main()
 {
     //Prompt user to choose menu option
-    readMenu();
+    int answer = readMenu();
+
+    database::Database mdb;
 
     //if statement depending on what is returned from readMenu()
-    if (readMenu() == 1)
+    if (answer == 1)
     {
-        addMovie(); 
+        mdb.addMovie(); 
 
-    } else if (readMenu() == 2)
+    } 
+    else if (answer == 2)
     {
-        deleteMovie(); 
+        mdb.deleteMovie(); 
 
-    } else if (readMenu() == 3)
+    } 
+    else if (answer == 3)
     {
-        printMovie(); 
-
-    } else
-    {
-        writeMovieDB(); 
+        mdb.printMovie(); 
     }
+
+    // } else
+    // {
+    //     break;
+    //    // mdb.writeMovieDB(); 
+    // }
+
+    //Ask user if they would like to use database again
 }
 

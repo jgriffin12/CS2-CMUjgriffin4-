@@ -12,6 +12,17 @@
 _______________________________________________________________________________________________________________
 # Assignments
 
+## HW 1
+| Name | Value |
+| --- | --- |
+| Name: | Movie Database |
+| Description: | Program is a Movie Database. The database is able to add, delete, print, or write the database to another csv file depending on what the user wants.  |
+| Due Date: |  |
+| Status: | In Progress |
+| Location: | |
+| Self Grade: | 50/100 |
+| Notes: | Not done - Add and print function are complete. |
+
 # LABS
 
 ## Lab #1

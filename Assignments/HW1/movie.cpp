@@ -9,12 +9,12 @@ movies::Movie::Movie(string titleid, string title, string year, string genre, do
     gen_re = genre;
     rat_ing = rating;
     dir_ector = director; 
-}
+};
 
-// Destructor for Movie - Will use when deleting a movie 
+// Destructor for Movie - Will use when deleting a movie (does this work?)
 movies::Movie::~Movie()
 {
-
+    cout << "Movie deleted." << endl; 
 }
 
 // Getters
