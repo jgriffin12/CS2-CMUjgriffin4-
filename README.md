@@ -21,7 +21,7 @@ ________________________________________________________________________________
 | Status: | In Progress |
 | Location: | |
 | Self Grade: | 50/100 |
-| Notes: | Not done - Add and print function are complete. |
+| Notes: | Not done - Add, delete, and print function are complete. |
 
 # LABS
 

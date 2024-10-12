@@ -1,6 +1,7 @@
 #include "database.h"
 #include "movie.h"
 #include <fstream>
+#include <vector>
 
 // Function to add movie to the database - Need to fix string input for Name of Movie
 void database::Database::addMovie()
@@ -38,7 +39,7 @@ void database::Database::addMovie()
     cout << movieObj.get_titleID() << ", " << movieObj.getTitle() << ", " << movieObj.getYear() << ", " << movieObj.getGenre() << ", " << 
         movieObj.getRating() << ", " << movieObj.getDirector() << endl;
 
-    //Adds movieto csv file. 
+    //Adds movie to csv file. 
     fout << movieObj.get_titleID() << ", " << movieObj.getTitle() << ", " << movieObj.getYear() << ", " << movieObj.getGenre() << ", " << 
         movieObj.getRating() << ", " << movieObj.getDirector() << endl;
 
@@ -55,32 +56,38 @@ void database::Database::deleteMovie()
     //Open CSV file
     fin.open("movies.csv", ios::in);
 
+    //Error message if movies.csv fails to open
+    if (fin.fail())
+    {
+        cout << "Error - File did not open." << endl; 
+    }
+
+    // New file to store data that is not deleted
+    fout.open("movies_new.csv", ios::out);
+
     // User input for which movie record to delete
     string movie_id; 
     cout << "Please enter the IMBD of the movie you would like to remove: "; 
     cin >> movie_id; 
 
-    while (!fin.eof())
+    while (getline(fin, line))
     {
-        getline(fin, line); 
-
-        string str; 
-        for (unsigned int i = 0; i < line.size(); i++)
+        if (line.find(movie_id) == string::npos)
         {
-            if (line[i] == ',')
-            {
-                break;
-            }
-            else
-            {
-                str += line[i]; 
-            }
-        }  
-        if (movie_id != str)
-        {
-            fout << line; 
+            fout << line << endl;
         }
     }
+
+    //Close files
+    fout.close();
+    fin.close();
+
+    //Rename updated file to movies.csv
+    remove("movies.csv");
+    rename("movies_new.csv", "movies.csv"); 
+
+    cout << "The movie was successfully deleted."; 
+
 }
 
 // Function to print all the movies from the database - Read csv file and print 
