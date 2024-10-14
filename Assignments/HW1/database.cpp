@@ -2,8 +2,9 @@
 #include "movie.h"
 #include <fstream>
 #include <vector>
+#include <cctype>
 
-// Function to add movie to the database - Need to fix string input for Name of Movie
+// Function to add movie to the database 
 void database::Database::addMovie()
 {
     // Prompts user to enter movie information 
@@ -93,7 +94,7 @@ void database::Database::deleteMovie()
 // Function to print all the movies from the database - Read csv file and print 
 void database::Database::printMovie()
 {
-    cout << "\nThis is the list of all the movies in the database. \n\n"; 
+    cout << "\nThis is a list of all the movies in the database. \n\n"; 
 
     ifstream myfilepath("movies.csv");
 
@@ -106,21 +107,72 @@ void database::Database::printMovie()
 }
 
 // Function to write the movies from the database to a separate csv file
-// void database::Database::writeMovieDB()
-// {
-//     cout << "write to movie" << endl; 
-// }
+void database::Database::writeMovieDB()
+{
+    cout << "write to movie" << endl; 
+}
 
-// Update movies.csv with added movie (if statement?)
-// void updateCSV()
-// {
-//     fstream fin, fout; 
+void database::Database::searchMovies()
+{
+    string answer, movie_title, genre; 
+    cout << "Would you like to search the movie database by title or genre? "; 
+    cin >> answer; 
 
-//     //Open the csv file
-//     fin.open("movies.csv", ios::in);
+    fstream fin, fout; 
+    string line, found_movies; 
+    vector <string> rows; 
 
-//     //Store updated database
-//     fout.open("movies.csv", ios::out); 
+    //Open CSV file
+    fin.open("movies.csv", ios::in);
 
-// }
+    if (answer == "title" || answer == "Title")
+    {
+        cout << "Please enter the title of the movie you would like to see: ";
+        cin.ignore(); 
+        getline(cin, movie_title);
+
+        //Add line from file to vector <rows>
+        while (getline(fin, line, '\n'))
+        {
+            rows.push_back(line); 
+        }
+
+        //Iterate through each element in vector <rows> and see if title or word is found. 
+        for (int i = 0; i <= rows.size(); i++)
+        {
+            if (rows[i].find((movie_title)) != string::npos)
+            {
+                cout << "\n" << rows[i] << "\n" << endl; 
+            }
+        }
+
+    }
+    else if (answer == "genre" || answer == "Genre")
+    {
+        cout << "Please enter the genre you would like to see: ";
+        cin >> genre; 
+
+        //Add line from file to vector <rows>
+        while (getline(fin, line, '\n'))
+        {
+            rows.push_back(line); 
+        }
+
+        //Iterate through each element in vector <rows> and check if genre is found. 
+        for (int i = 0; i <= rows.size(); i++)
+        {
+            if (rows[i].find(genre) != string::npos)
+            {
+                cout << "\n" << rows[i] << "\n" << endl; 
+            }
+        }
+    }
+    else
+    {
+        cout << "Invalid input. Please try again."; 
+    }
+
+    // Close file
+    fin.close();
+}
 

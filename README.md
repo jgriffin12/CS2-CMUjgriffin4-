@@ -20,8 +20,8 @@ ________________________________________________________________________________
 | Due Date: |  |
 | Status: | In Progress |
 | Location: | |
-| Self Grade: | 50/100 |
-| Notes: | Not done - Add, delete, and print function are complete. |
+| Self Grade: | 75/100 |
+| Notes: | Not done - Add, delete, search and print functions are complete. |
 
 # LABS
 
