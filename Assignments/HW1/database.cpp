@@ -2,7 +2,6 @@
 #include "movie.h"
 #include <fstream>
 #include <vector>
-#include <cctype>
 
 // Function to add movie to the database 
 void database::Database::addMovie()
@@ -109,7 +108,29 @@ void database::Database::printMovie()
 // Function to write the movies from the database to a separate csv file
 void database::Database::writeMovieDB()
 {
-    cout << "write to movie" << endl; 
+    fstream fin, fout; 
+    string line; 
+
+    //Open current CSV file
+    fin.open("movies.csv", ios::in);
+
+    // New csv file to write database to
+    fout.open("movielist_new.csv", ios::out);
+
+    //Error message if movies.csv fails to open
+    if (fin.fail())
+    {
+        cout << "Error - File did not open." << endl; 
+    }
+
+    //Read file. 
+    while (getline(fin, line, '\n'))
+    {
+        fout << line << endl;
+    }
+
+    cout << "New movie database created. Please check the movielist_new.csv file. " << endl; 
+    
 }
 
 void database::Database::searchMovies()
@@ -119,7 +140,7 @@ void database::Database::searchMovies()
     cin >> answer; 
 
     fstream fin, fout; 
-    string line, found_movies; 
+    string line; 
     vector <string> rows; 
 
     //Open CSV file
@@ -145,7 +166,6 @@ void database::Database::searchMovies()
                 cout << "\n" << rows[i] << "\n" << endl; 
             }
         }
-
     }
     else if (answer == "genre" || answer == "Genre")
     {

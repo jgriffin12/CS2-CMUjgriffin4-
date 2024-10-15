@@ -17,11 +17,11 @@ ________________________________________________________________________________
 | --- | --- |
 | Name: | Movie Database |
 | Description: | Program is a Movie Database. The database is able to add, delete, print, or write the database to another csv file depending on what the user wants.  |
-| Due Date: |  |
+| Due Date: | n/a |
 | Status: | In Progress |
-| Location: | |
-| Self Grade: | 75/100 |
-| Notes: | Not done - Add, delete, search and print functions are complete. |
+| Location: |https://github.com/jgriffin12/CS2-CMUjgriffin4-/tree/main/Assignments/HW1 |
+| Self Grade: | 85/100 |
+| Notes: | Program is complete. However, it does compile with an error.  |
 
 # LABS
 
