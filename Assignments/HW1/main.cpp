@@ -3,7 +3,6 @@ Name: Janet Griffin
 Date: 09/18/2024
 Program: Movie Database
 Description: Movie database is able to add movies, delete movies, search by title/genre, and write to a separate csv file. 
-
 */
 
 #include <iostream>
@@ -72,7 +71,7 @@ bool repeatMenu()
     else
     {
         cout << "Invalid input. Try again." << endl;
-        readMenu(); 
+        return readMenu(); 
     }
 }
 

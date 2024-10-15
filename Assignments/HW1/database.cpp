@@ -155,7 +155,7 @@ void database::Database::searchMovies()
         cin.ignore(); 
         getline(cin, movie_title);
 
-        for (int i = 0; i < movie_title.length(); i++)
+        for (size_t i = 0; i < movie_title.length(); i++)
         {
             if (i == 0 || movie_title[i-1] == ' ')
             {
