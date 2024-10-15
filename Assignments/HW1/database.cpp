@@ -2,6 +2,7 @@
 #include "movie.h"
 #include <fstream>
 #include <vector>
+#include <cctype>
 
 // Function to add movie to the database 
 void database::Database::addMovie()
@@ -153,6 +154,14 @@ void database::Database::searchMovies()
         cout << "Please enter the title of the movie you would like to see: ";
         cin.ignore(); 
         getline(cin, movie_title);
+
+        for (int i = 0; i < movie_title.length(); i++)
+        {
+            if (i == 0 || movie_title[i-1] == ' ')
+            {
+                movie_title[i] = toupper(movie_title[i]); 
+            }
+        }
 
         //Add line from file to vector <rows>
         while (getline(fin, line, '\n'))

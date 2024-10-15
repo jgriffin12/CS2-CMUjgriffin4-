@@ -2,7 +2,7 @@
 Name: Janet Griffin
 Date: 09/18/2024
 Program: Movie Database
-Description:
+Description: Movie database is able to add movies, delete movies, search by title/genre, and write to a separate csv file. 
 
 */
 
