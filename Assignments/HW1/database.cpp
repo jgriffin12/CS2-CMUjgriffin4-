@@ -45,6 +45,8 @@ void database::Database::addMovie()
 
     //Closes file 
     fout.close(); 
+
+    cout << "Movie was added. Please check movies.csv for an updated list.";
 }
 
 // Function to delete movie from the database 
@@ -135,7 +137,7 @@ void database::Database::writeMovieDB()
 
 void database::Database::searchMovies()
 {
-    string answer, movie_title, genre; 
+    string answer, movie_title, genre, words; 
     cout << "Would you like to search the movie database by title or genre? "; 
     cin >> answer; 
 
@@ -171,6 +173,9 @@ void database::Database::searchMovies()
     {
         cout << "Please enter the genre you would like to see: ";
         cin >> genre; 
+
+        //Capitalizes first letter of word input so that search function works correctly
+        genre[0] = toupper(genre[0]); 
 
         //Add line from file to vector <rows>
         while (getline(fin, line, '\n'))
