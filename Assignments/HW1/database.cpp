@@ -159,7 +159,7 @@ void database::Database::searchMovies()
         }
 
         //Iterate through each element in vector <rows> and see if title or word is found. 
-        for (int i = 0; i <= rows.size(); i++)
+        for (size_t i = 0; i <= rows.size(); i++)
         {
             if (rows[i].find((movie_title)) != string::npos)
             {
@@ -179,7 +179,7 @@ void database::Database::searchMovies()
         }
 
         //Iterate through each element in vector <rows> and check if genre is found. 
-        for (int i = 0; i <= rows.size(); i++)
+        for (size_t i = 0; i <= rows.size(); i++)
         {
             if (rows[i].find(genre) != string::npos)
             {
