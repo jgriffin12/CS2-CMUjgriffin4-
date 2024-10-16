@@ -26,7 +26,8 @@ void database::Database::addMovie()
     cout << "Rating: ";
     cin >> movie_rating; 
     cout << "Director: ";
-    cin >> movie_director; 
+    cin.ignore();
+    getline(cin, movie_director); 
 
     // Create a movie object by using the Movie constructor
     movies::Movie movieObj(imbd, movie_name, movie_year, movie_genre, movie_rating, movie_director);
