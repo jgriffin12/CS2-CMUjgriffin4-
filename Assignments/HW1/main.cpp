@@ -115,6 +115,6 @@ int main()
 
     } while (repeat == true);
 
-    cout << "Thanks for using the movie database! Goodbye!"; 
+    cout << "\nThanks for using the movie database! Goodbye!"; 
 }
 

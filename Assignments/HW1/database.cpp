@@ -135,6 +135,9 @@ void database::Database::writeMovieDB()
 
     cout << "New movie database created. Please check the movielist_new.csv file. " << endl; 
     
+    //Close files
+    fin.close(); 
+    fout.close(); 
 }
 
 void database::Database::searchMovies()
