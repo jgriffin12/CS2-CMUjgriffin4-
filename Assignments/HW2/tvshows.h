@@ -1,7 +1,6 @@
 # pragma once
-
-#include <iostream>
-#include "media.h"
+# include <iostream>
+# include "media.h"
 
 namespace tvshows
 {
@@ -13,6 +12,11 @@ namespace tvshows
             int numEpisodes; 
 
         public:
+            //Constructor - initialize
+            Tvshows(string = "", double = 0.00, int = 0);
+
+            //Destructor - initialize
+            ~Tvshows(); 
 
         // Getter Methods
         string get_Tvgenre();

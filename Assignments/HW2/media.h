@@ -26,7 +26,8 @@ namespace media
             string get_mediaTitle();
             string get_mediaYear(); 
 
-            void displayInfo();
+            //displayInfo() needs to return a string
+            string displayInfo();
 
             //Setter Methods
             void setMediaId(string);

@@ -24,12 +24,12 @@ using namespace std;
 int readMenu()
 {
     int option; 
-    cout << "\nWelcome to the Media Database. Please select a media option you would like to work with: \n" << endl;
-    cout << "[1] Movie " << endl;
-    cout << "[2] Music " << endl;
-    cout << "[3] Tv Show" << endl;
-    cout << "[4] Write Media Database to Separate CSV file" << endl;
-    cout << "[5] Search through Media Database" << endl; 
+    cout << "\nWelcome to the Multi-media Database. Please select an option below:  \n" << endl;
+    cout << "[1] Add a new item to the Multi-media Database " << endl;
+    cout << "[2] Delete an item in the Multi-media Database " << endl;
+    cout << "[3] Display the Multi-media Database" << endl;
+    cout << "[4] Search the Multi-media Database" << endl; 
+    cout << "[5] Write the Multi-media Database to a separate CSV file" << endl;
     cin >> option;
 
     if (option == 1)
@@ -60,7 +60,7 @@ int readMenu()
     }
 }
 
-// Bool function for if user wants to select another option within Movie Database 
+// Bool function for if user wants to select another option within Media Database 
 bool repeatMenu()
 {
     char answer; 
@@ -96,32 +96,32 @@ int main()
         //if statement depending on what is returned from readMenu()
         if (answer == 1)
         {
-            mdb.addMovie(); 
+            mdb.addMedia(); 
             repeat = repeatMenu(); 
         } 
         else if (answer == 2)
         {
-            mdb.deleteMovie(); 
+            mdb.deleteMedia(); 
             repeat = repeatMenu(); 
         } 
         else if (answer == 3)
         {
-            mdb.printMovie(); 
+            mdb.displayMedia(); 
             repeat = repeatMenu(); 
         }
         else if (answer == 4)
         {
-            mdb.writeMovieDB();
-            repeat = repeatMenu();  
+            mdb.searchMediaDB();
+            repeat = repeatMenu(); 
         }
-        else
+        else if (answer == 5)
         {
-            mdb.searchMovies();
+            mdb.writeCSVfile(); 
             repeat = repeatMenu(); 
         }
 
     } while (repeat == true);
 
-    cout << "\nThanks for using the media database! Goodbye!"; 
+    cout << "\nThanks for using the Multi-media database! Goodbye!"; 
 }
 

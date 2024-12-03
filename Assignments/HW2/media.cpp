@@ -8,7 +8,7 @@ media::Media::Media(string mediaid, string mediatitle, string mediayear)
     media_year = mediayear;
 };
 
-// Destructor for Movie - Will use when deleting a movie (does this work?)
+// Destructor for Media
 media::Media::~Media()
 {
    
@@ -30,8 +30,26 @@ string media::Media::get_mediaYear()
     return media_year;
 }
 
+// Setters
+void media::Media::setMediaId(string new_mediaid)
+{
+    media_id = new_mediaid;
+}
+
+void media::Media::setMediaTitle(string new_mediatitle)
+{
+    media_title = new_mediatitle;
+}
+
+void media::Media::setMediaYear(string new_mediayear)
+{
+    media_year = new_mediayear;
+}
+
 // Function returns string
-// void media::Media::displayInfo()
-// {
-    
-// }
+string media::Media::displayInfo()
+{
+    // Print out the added item
+    cout << medObj.get_titleID() << ", " << movieObj.getTitle() << ", " << movieObj.getYear() << ", " << movieObj.getGenre() << ", " <<         
+        movieObj.getRating() << ", " << movieObj.getDirector() << endl;
+}

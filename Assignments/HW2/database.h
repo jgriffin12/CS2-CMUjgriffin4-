@@ -5,6 +5,7 @@
 #include "movie.h"
 #include "music.h"
 #include "tvshows.h"
+#include "media.h"
 
 using namespace std; 
 
@@ -22,9 +23,9 @@ namespace database
         public:
             void addMedia(); 
             void deleteMedia();
-            void displayInfo();
-            void printMediaTable();
-            void searchMedia(); 
+            void displayMedia();
+            void searchMediaDB(); 
+            void writeCSVfile(); 
     };
 };
 
