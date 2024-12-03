@@ -34,6 +34,39 @@ ________________________________________________________________________________
 | Self Grade: | n/a |
 | Notes: | Not done.  |
 
+## HW 3
+| Name | Value |
+| --- | --- |
+| Name: | Media Database |
+| Description: | Program is continuation of the Movie Database (HW1) except it now has multiple Media types (movies/tvshows/music).   |
+| Due Date: | n/a |
+| Status: | Incomplete |
+| Location: | |
+| Self Grade: | n/a |
+| Notes: | Not done.  |
+
+## HW 4
+| Name | Value |
+| --- | --- |
+| Name: | Media Database |
+| Description: | Program is continuation of the Movie Database (HW1) except it now has multiple Media types (movies/tvshows/music).   |
+| Due Date: | n/a |
+| Status: | Incomplete |
+| Location: | |
+| Self Grade: | n/a |
+| Notes: | Not done.  |
+
+## Final
+| Name | Value |
+| --- | --- |
+| Name: | Media Database |
+| Description: | Program is continuation of the Movie Database (HW1) except it now has multiple Media types (movies/tvshows/music).   |
+| Due Date: | n/a |
+| Status: | Incomplete |
+| Location: | |
+| Self Grade: | n/a |
+| Notes: | Not done.  |
+
 # LABS
 
 ## Lab #1
