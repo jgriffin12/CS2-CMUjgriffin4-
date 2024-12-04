@@ -28,7 +28,7 @@ ________________________________________________________________________________
 | --- | --- |
 | Name: | Media Database |
 | Description: | Program is continuation of the Movie Database (HW1) except it now has multiple Media types (movies/tvshows/music).   |
-| Due Date: | n/a |
+| Due Date: | N/a |
 | Status: | Complete |
 | Location: | |
 | Self Grade: | 90/100 |
