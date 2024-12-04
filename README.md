@@ -98,9 +98,9 @@ ________________________________________________________________________________
 | Description: | Program implements a fraction calculator using overloading operators.  |
 | Due Date: | n/a|
 | Status: | Complete |
-| Location: | |
+| Location: |https://github.com/jgriffin12/CS2-CMUjgriffin4-/blob/main/Labs/Lab%203/fractions.cpp |
 | Self Grade: | 95/100 |
-| Notes: |  The programs works as intended. |
+| Notes: |  The programs works as intended. Screenshot included. |
 
 ## Lab #4
 | Name | Value |
