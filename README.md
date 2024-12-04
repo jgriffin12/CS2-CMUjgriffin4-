@@ -30,7 +30,7 @@ ________________________________________________________________________________
 | Description: | Program is continuation of the Movie Database (HW1) except it now has multiple Media types (movies/tvshows/music).   |
 | Due Date: | N/a |
 | Status: | Complete |
-| Location: | |
+| Location: | https://github.com/jgriffin12/CS2-CMUjgriffin4-/blob/main/Assignments/HW2/database.cpp |
 | Self Grade: | 90/100 |
 | Notes: | Functions work correctly and screenshots of program running included. Currently missing displayInfo() information for media- will go back if I have additional time. |
 
