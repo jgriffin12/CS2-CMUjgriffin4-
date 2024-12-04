@@ -37,8 +37,8 @@ ________________________________________________________________________________
 ## HW 3
 | Name | Value |
 | --- | --- |
-| Name: | Media Database |
-| Description: | Program is continuation of the Movie Database (HW1) except it now has multiple Media types (movies/tvshows/music).   |
+| Name: | Reverse Polish Notation |
+| Description: | Program implements a stack in C++ using singly linked list   |
 | Due Date: | n/a |
 | Status: | Incomplete |
 | Location: | |
@@ -48,8 +48,8 @@ ________________________________________________________________________________
 ## HW 4
 | Name | Value |
 | --- | --- |
-| Name: | Media Database |
-| Description: | Program is continuation of the Movie Database (HW1) except it now has multiple Media types (movies/tvshows/music).   |
+| Name: | Word Counter |
+| Description: | Program will implement a word counter in C++ using classes (operator overloading and storing each word in BST).  |
 | Due Date: | n/a |
 | Status: | Incomplete |
 | Location: | |
@@ -75,10 +75,10 @@ ________________________________________________________________________________
 | Name: | Game of Life |
 | Description: | Program implements 10x10 grid of Conway's Game of Life. |
 | Due Date: | 09/06/2024 |
-| Status: | Incomplete|
+| Status: | Complete |
 | Location: | https://github.com/jgriffin12/CS2-CMUjgriffin4-/tree/main/Projects/Lab%201 |
 | Self Grade: | 90/100 |
-| Notes: | Please regrade. I went back and worked on Lab1 to complete most of the functions. Most work correctly except for the updateCellState. I was unable to get it to work 100%  |
+| Notes: | Please regrade. I went back and worked on Lab1 to complete most of the functions. Most work correctly except for the updateCellState. I was unable to get it to work 100%. |
 
 ## Lab #2
 | Name | Value |
@@ -95,12 +95,12 @@ ________________________________________________________________________________
 | Name | Value |
 | --- | --- |
 | Name: | Fraction Calculator |
-| Description: | Program implements a fraction calculator. |
+| Description: | Program implements a fraction calculator using overloading operators.  |
 | Due Date: | n/a|
 | Status: | Complete |
 | Location: | |
-| Self Grade: |  |
-| Notes: |   |
+| Self Grade: | 95/100 |
+| Notes: |  The programs works as intended. |
 
 ## Lab #4
 | Name | Value |
@@ -108,7 +108,7 @@ ________________________________________________________________________________
 | Name: | Doubly Linked List |
 | Description: | Program implements a doubly linked list.  |
 | Due Date: | n/a|
-| Status: | Complete |
+| Status: | Incomplete |
 | Location: | |
 | Self Grade: |  |
 | Notes: |   |
