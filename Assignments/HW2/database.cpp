@@ -101,14 +101,8 @@ void database::Database::addMedia()
     }
     else
     {
-        // Need to loop back to type options if here 
         cout << "Not a valid option. Try again."; 
     }
-
-    //Print out the added item by calling the displayInfo() function from media.cpp
-    cout << "\nThe following item was added to the database: " << endl; 
-    
-    cout << "displayInfo() not working - fixing" << endl; 
 
     cout << "Item was added. Please check the affiliated csv file for an updated record.";
 }
@@ -187,18 +181,57 @@ void database::Database::deleteMedia()
     cout << "The media item was successfully deleted."; 
 }
 
-// Function to display Media Database information
+// Function to display Media Database information given 
 void database::Database::displayMedia()
 {
-    cout << "\nThis is a list of all the movies in the database. \n\n"; 
+    string type; 
 
-    ifstream myfilepath("movies.csv");
+    cout << "What type of media would you like to see? Please choose one of the following (Movie|Tv|Music): " << endl; 
+    cin >> type; 
 
-    while (!myfilepath.eof())
+    if (type == "movie" || type == "Movie")
     {
-        string line; 
-        getline(myfilepath, line, ',');
-        cout << line; 
+        cout << "Here is a list of movies within the database: \n" << endl; 
+
+
+        ifstream myfilepath("movies.csv");
+
+        while (!myfilepath.eof())
+        {
+            string line; 
+            getline(myfilepath, line, ',');
+            cout << line; 
+        }
+    }
+    else if (type == "Tv" || type == "tv")
+    {
+        cout << "Here is a list of TV Shows within the database: \n" << endl; 
+
+        ifstream myfilepath("tvshows.csv");
+
+        while (!myfilepath.eof())
+        {
+            string line; 
+            getline(myfilepath, line, ',');
+            cout << line; 
+        }
+    }
+    else if (type == "Music" || type == "music")
+    {
+        cout << "Here is a list of Music within the database: \n" << endl; 
+
+        ifstream myfilepath("music.csv");
+
+        while (!myfilepath.eof())
+        {
+            string line; 
+            getline(myfilepath, line, ',');
+            cout << line; 
+        }
+    }
+    else
+    {
+        cout << "Not valid. " << endl; 
     }
 }
 
@@ -211,8 +244,8 @@ void database::Database::searchMediaDB()
 
     // Stream variables for the three csv files. 
     fstream fin, fout, fin2, fout2, fin3, fout3; 
-    string line; 
-    vector <string> rows; 
+    string line, line2, line3; 
+    vector <string> rows, rows2, rows3; 
 
     //Open CSV files
     fin.open("movies.csv", ios::in);
@@ -224,16 +257,7 @@ void database::Database::searchMediaDB()
         cout << "Please enter the Media ID that you would like to search for: ";
         cin >> media_id; 
 
-        //Search for ID in all of the files
-        for (size_t i = 0; i < media_id.length(); i++)
-        {
-            if (i == 0 || media_title[i-1] == ' ')
-            {
-                media_title[i] = toupper(media_title[i]); // I dont need? 
-            }
-        }
-
-        //Add line from file to vector <rows>
+        //Add line from file 1 to vector <rows>
         while (getline(fin, line, '\n'))
         {
             rows.push_back(line); 
@@ -242,18 +266,98 @@ void database::Database::searchMediaDB()
         //Iterate through each element in vector <rows> and see if media_id is found. 
         for (size_t i = 0; i <= rows.size(); i++)
         {
+            // Record is found and printed out
             if (rows[i].find((media_id)) != string::npos)
             {
                 cout << "\n" << rows[i] << "\n" << endl; 
             }
         }
-    }
-    if (answer == "title" || answer == "Title")
-    {
-        cout << "Please enter the name or title of the item you would like to search for: ";
-        cin.ignore(); 
-        getline(cin, media_title);
+        while (getline(fin2, line2, '\n'))
+        {
+            rows2.push_back(line2); 
+        }
 
+        //Iterate through each element in vector <rows2> and see if media_id is found. 
+        for (size_t i = 0; i <= rows.size(); i++)
+        {
+            // Record is found and printed out
+            if (rows2[i].find((media_id)) != string::npos)
+            {
+                cout << "\n" << rows2[i] << "\n" << endl; 
+            }
+        }
+        while (getline(fin3, line3, '\n'))
+        {
+            rows3.push_back(line3); 
+        }
+        //Iterate through each element in vector <rows3> and see if media_id is found. 
+        for (size_t i = 0; i <= rows.size(); i++)
+        {
+            // Record is found and printed out
+            if (rows3[i].find((media_id)) != string::npos)
+            {
+                cout << "\n" << rows3[i] << "\n" << endl; 
+            }
+        }
+    }
+
+    else if (answer == "Genre" || answer == "genre")
+    {
+        cout << "Please enter the Media genre that you would like to search for: ";
+        cin >> media_genre; 
+
+        //Capitalizes first letter of word input so that search function works correctly
+        media_genre[0] = toupper(media_genre[0]); 
+
+        //Add line from file 1 to vector <rows>
+        while (getline(fin, line, '\n'))
+        {
+            rows.push_back(line); 
+        }
+
+        //Iterate through each element in vector <rows> and see if media_id is found. 
+        for (size_t i = 0; i <= rows.size(); i++)
+        {
+            // Record is found and printed out
+            if (rows[i].find((media_genre)) != string::npos)
+            {
+                cout << "\n" << rows[i] << "\n" << endl; 
+            }
+        }
+        while (getline(fin2, line2, '\n'))
+        {
+            rows2.push_back(line2); 
+        }
+
+        //Iterate through each element in vector <rows2> and see if media_id is found. 
+        for (size_t i = 0; i <= rows.size(); i++)
+        {
+            // Record is found and printed out
+            if (rows2[i].find((media_genre)) != string::npos)
+            {
+                cout << "\n" << rows2[i] << "\n" << endl; 
+            }
+        }
+        while (getline(fin3, line3, '\n'))
+        {
+            rows3.push_back(line3); 
+        }
+        //Iterate through each element in vector <rows3> and see if media_id is found. 
+        for (size_t i = 0; i <= rows.size(); i++)
+        {
+            // Record is found and printed out
+            if (rows3[i].find((media_genre)) != string::npos)
+            {
+                cout << "\n" << rows3[i] << "\n" << endl; 
+            }
+        }
+    }
+    else if (answer == "Title" || answer == "title")
+    {
+        cout << "Please enter the Media title that you would like to search for: ";
+        cin >> media_title; 
+
+        //Takes care of capitalization
         for (size_t i = 0; i < media_title.length(); i++)
         {
             if (i == 0 || media_title[i-1] == ' ')
@@ -262,49 +366,49 @@ void database::Database::searchMediaDB()
             }
         }
 
-        //Add line from file to vector <rows>
+        //Add line from file 1 to vector <rows>
         while (getline(fin, line, '\n'))
         {
             rows.push_back(line); 
         }
 
-        //Iterate through each element in vector <rows> and see if title or word is found. 
+        //Iterate through each element in vector <rows> and see if media_id is found. 
         for (size_t i = 0; i <= rows.size(); i++)
         {
+            // Record is found and printed out
             if (rows[i].find((media_title)) != string::npos)
             {
                 cout << "\n" << rows[i] << "\n" << endl; 
             }
         }
-    }
-    else if (answer == "genre" || answer == "Genre")
-    {
-        cout << "Please enter the genre you would like to see: ";
-        cin >> media_genre; 
-
-        //Capitalizes first letter of word input so that search function works correctly
-        media_genre[0] = toupper(media_genre[0]); 
-
-        //Add line from file to vector <rows>
-        while (getline(fin, line, '\n'))
+        while (getline(fin2, line2, '\n'))
         {
-            rows.push_back(line); 
+            rows2.push_back(line2); 
         }
 
-        //Iterate through each element in vector <rows> and check if genre is found. 
+        //Iterate through each element in vector <rows2> and see if media_id is found. 
         for (size_t i = 0; i <= rows.size(); i++)
         {
-            if (rows[i].find(media_genre) != string::npos)
+            // Record is found and printed out
+            if (rows2[i].find((media_title)) != string::npos)
             {
-                cout << "\n" << rows[i] << "\n" << endl; 
+                cout << "\n" << rows2[i] << "\n" << endl; 
+            }
+        }
+        while (getline(fin3, line3, '\n'))
+        {
+            rows3.push_back(line3); 
+        }
+        //Iterate through each element in vector <rows3> and see if media_id is found. 
+        for (size_t i = 0; i <= rows.size(); i++)
+        {
+            // Record is found and printed out
+            if (rows3[i].find((media_title)) != string::npos)
+            {
+                cout << "\n" << rows3[i] << "\n" << endl; 
             }
         }
     }
-    else
-    {
-        cout << "Invalid input. Please try again."; 
-    }
-
     // Close files
     fin.close();
     fin2.close();

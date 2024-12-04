@@ -27,7 +27,7 @@ int readMenu()
     cout << "\nWelcome to the Multi-media Database. Please select an option below:  \n" << endl;
     cout << "[1] Add a new item to the Multi-media Database " << endl;
     cout << "[2] Delete an item in the Multi-media Database " << endl;
-    cout << "[3] Display the Multi-media Database" << endl;
+    cout << "[3] Display the Multi-media Database given a type of media" << endl;
     cout << "[4] Search the Multi-media Database" << endl; 
     cout << "[5] Write the Multi-media Database to a separate CSV file" << endl;
     cin >> option;
