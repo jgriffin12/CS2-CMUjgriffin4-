@@ -46,10 +46,12 @@ void media::Media::setMediaYear(string new_mediayear)
     media_year = new_mediayear;
 }
 
-// Function returns string
-string media::Media::displayInfo()
-{
-    // Print out the added item
-    cout << medObj.get_titleID() << ", " << movieObj.getTitle() << ", " << movieObj.getYear() << ", " << movieObj.getGenre() << ", " <<         
-        movieObj.getRating() << ", " << movieObj.getDirector() << endl;
-}
+//Create Media Object using constructor
+
+// // Function returns string
+// string media::Media::displayInfo()
+// {
+//     // // // Print out the added item
+//     // cout << .get_titleID() << ", " << movieObj.getTitle() << ", " << movieObj.getYear() << ", " << movieObj.getGenre() << ", " <<         
+//     //     movieObj.getRating() << ", " << movieObj.getDirector() << endl;
+// }
