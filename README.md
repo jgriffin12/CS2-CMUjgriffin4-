@@ -43,7 +43,7 @@ ________________________________________________________________________________
 | Status: | Incomplete |
 | Location: | |
 | Self Grade: | n/a |
-| Notes: | Not done.  |
+| Notes: | Not done. In process of completing stack.h and main.cpp  |
 
 ## HW 4
 | Name | Value |
