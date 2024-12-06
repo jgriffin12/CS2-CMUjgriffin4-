@@ -59,8 +59,8 @@ ________________________________________________________________________________
 ## Final
 | Name | Value |
 | --- | --- |
-| Name: | Media Database |
-| Description: | Program is continuation of the Movie Database (HW1) except it now has multiple Media types (movies/tvshows/music).   |
+| Name: | Game |
+| Description: | Program is text based game that navigates a player through rooms of a dungeon.  |
 | Due Date: | n/a |
 | Status: | Incomplete |
 | Location: | |
@@ -108,10 +108,10 @@ ________________________________________________________________________________
 | Name: | Doubly Linked List |
 | Description: | Program implements a doubly linked list.  |
 | Due Date: | n/a|
-| Status: | Incomplete |
+| Status: | Complete |
 | Location: | |
-| Self Grade: |  |
-| Notes: |   |
+| Self Grade: | 100/100 |
+| Notes: |  Program works correctly.  |
 
 ## Lab #5
 | Name | Value |

@@ -20,7 +20,7 @@ int main(int argc, char* argv[])
     cin >> insertNumber;
     while(insertNumber != -999)
     {
-        
+
         myList.push_back(insertNumber);
         cout << "Enter -999 to quit entering elements: ";
         cin >> insertNumber;
