@@ -62,14 +62,23 @@ size_t Stack::size()
 // add an element to the beginning of the Stack, updating top
 void Stack::push(double data)
 {
-    //Create temporary stack
-    Node<double> temp; 
+    if (!empty())
+    {
+        Node<double>* newNode =  new Node<double>;
+        newNode -> setData(data);
+        newNode -> setNext(_top);
+        _top -> setPrev(newNode);
+        _top = newNode; 
+    }
+    else
+    {
+        //Empty
+        _top = new Node<double>; 
+        _top -> setData(data); 
+    }
 
-    //Push element into temp stack
-
-    //
-
-    //Move data from original stack to temp stack
+    //Increase stackSize
+    stackSize++; 
 }
 
 // return the first element in the Stack. (get the bottom element from stack)
@@ -83,7 +92,7 @@ double Stack::top()
     }
     else
     {
-        //do studd
+        return _top ->getData(); 
     }
 }
 
@@ -98,6 +107,18 @@ double Stack::pop()
     }
     else
     {
-        // do stuff
+        // Assign _top to returnFirstEl and link to getData()
+        double returnFirstEl = _top ->getData();
+        //Create temp Node to store _top
+        Node <double>* temp = _top; 
+        //Assign top to next node
+        _top = _top -> getNext(); 
+        //Delete temp node
+        delete temp; 
+
+        //Decrement by 1
+        stackSize--; 
+
+        return returnFirstEl; 
     }
 }
