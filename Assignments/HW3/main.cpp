@@ -6,6 +6,8 @@
 
 using namespace std;
 
+void test(); 
+
 //RPN 
 double evaluateRPN(string expression)
 {
@@ -75,7 +77,9 @@ int main(int argc, char *argv[])
 
     cout << "Result: " << result; 
 
-   // test();
+    //Test function 
+    test();
+
    return 0; 
 }
 
@@ -83,9 +87,9 @@ int main(int argc, char *argv[])
 void test()
 {
     string test1 = " 3 4 + 5 6 - * ";
-    string test2 = " 9 1 / 3 - "; 
+    string test2 = " 9 1 / 3 4 - / "; 
     assert(evaluateRPN(test1) == -7); 
-    assert(evaluateRPN(test2) == -7); 
+    assert(evaluateRPN(test2) == -9); 
 
     cout << "All test cases passed." << endl; 
 }

@@ -40,10 +40,10 @@ ________________________________________________________________________________
 | Name: | Reverse Polish Notation |
 | Description: | Program implements a stack in C++ using singly linked list   |
 | Due Date: | n/a |
-| Status: | Incomplete |
+| Status: | Complete |
 | Location: | |
-| Self Grade: | n/a |
-| Notes: | Not done. In process of completing stack.h and main.cpp  |
+| Self Grade: | 90/100 |
+| Notes: | Functions work correctly. Does not test for invalid strings yet |
 
 ## HW 4
 | Name | Value |
