@@ -38,10 +38,10 @@ ________________________________________________________________________________
 | Name | Value |
 | --- | --- |
 | Name: | Reverse Polish Notation |
-| Description: | Program implements a stack in C++ using singly linked list   |
+| Description: | Program implements a stack in C++ using singly linked list.   |
 | Due Date: | n/a |
 | Status: | Complete |
-| Location: | |
+| Location: | https://github.com/jgriffin12/CS2-CMUjgriffin4-/blob/main/Assignments/HW3/main.cpp |
 | Self Grade: | 90/100 |
 | Notes: | Functions work correctly. Does not test for invalid strings yet |
 
