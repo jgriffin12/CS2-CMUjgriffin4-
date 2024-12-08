@@ -119,7 +119,7 @@ ________________________________________________________________________________
 | Name: | BST - Binary Search Trees |
 | Description: | Program implements a templated BST - starts with a constructor and then uses an empty method. |
 | Due Date: | 12/9/2024 |
-| Status: | Incomplete |
+| Status: | Complete |
 | Location: | |
-| Self Grade: |  |
-| Notes: |   |
+| Self Grade: | 90/100 |
+| Notes: | Program runs partially. However, the removeData function is having issues (segmentation fault when programs asks if you want to delete a node) Will fix if I have time. |
