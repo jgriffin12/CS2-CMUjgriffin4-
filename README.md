@@ -51,10 +51,10 @@ ________________________________________________________________________________
 | Name: | Word Counter |
 | Description: | Program will implement a word counter in C++ using classes (operator overloading and storing each word in BST).  |
 | Due Date: | n/a |
-| Status: | Incomplete |
-| Location: | |
-| Self Grade: | n/a |
-| Notes: | Not done.  |
+| Status: | Complete |
+| Location: |https://github.com/jgriffin12/CS2-CMUjgriffin4-/blob/main/Assignments/HW4/tree.h|
+| Self Grade: | 100/100|
+| Notes: | Functions work correctly. Screenshot of program running attached. |
 
 ## Final
 | Name | Value |
