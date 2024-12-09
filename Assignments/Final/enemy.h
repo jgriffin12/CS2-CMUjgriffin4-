@@ -11,8 +11,7 @@ namespace enemy
         private:
            string name;
            int health; 
-           int damage;
-           //<vector> inventory[][10];
+           int damage; 
 
         public:
         //Initialize constructor and destructor
@@ -30,8 +29,8 @@ namespace enemy
         void setDamage(int); 
 
         // Methods
-        void attack();
-        void take_damage(int amount); 
+        void e_attack();
+        void e_take_damage(int amount); 
 
     }; 
 }

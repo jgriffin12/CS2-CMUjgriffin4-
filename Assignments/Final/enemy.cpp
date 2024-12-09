@@ -43,13 +43,20 @@ void enemy::Enemy::setDamage(int new_damage)
 }
 
 //Attack function
-void attack()
+void e_attack()
 {
 
 }
 
 //Take damage function
-void take_damage(int amount)
+void enemy::Enemy::e_take_damage(int amount)
 {
+    health -= amount; 
+    cout << "The Ogre has taken damage." << endl; 
     
+    //If conditional to track health
+    if (health > 0)
+    {
+        cout << "Ogre Health Status: " << health << " remaining" << endl; 
+    }
 }
