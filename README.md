@@ -59,13 +59,13 @@ ________________________________________________________________________________
 ## Final
 | Name | Value |
 | --- | --- |
-| Name: | Game |
+| Name: | Dungeon Game |
 | Description: | Program is text based game that navigates a player through rooms of a dungeon.  |
 | Due Date: | n/a |
-| Status: | Incomplete |
-| Location: | |
-| Self Grade: | n/a |
-| Notes: | Not done.  |
+| Status: | Complete |
+| Location: | https://github.com/jgriffin12/CS2-CMUjgriffin4-/blob/main/Assignments/Final/main.cpp |
+| Self Grade: | 85/100 |
+| Notes: | Most things work correctly. However, there are a few kinks. Inventory list does not update, etc. There is an empty file dungeon.h that I accidentally commited along with the other files (I'm not sure how to get rid of.) |
 
 # LABS
 
